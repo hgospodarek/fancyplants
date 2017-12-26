@@ -9,6 +9,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <nav>
+        <%- if user_signed_in? %>
+          <%= button_to "Log out", destroy_user_session_path, method: :delete %><br />
+        <% end -%>
+      </nav>
+    </header>
+
+    <div class='main-content'>
+      <div class='flash'>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -6,9 +6,10 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jquery-rails'
+gem 'devise'
 
 gem 'listen'
-# why the fuck do I need to put this here in order for rspec install to work? 
+# why the fuck do I need to put this here in order for rspec install to work?
 
 group :development, :test do
   gem 'capybara'
