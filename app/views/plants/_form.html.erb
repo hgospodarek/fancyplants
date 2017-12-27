@@ -1,0 +1,124 @@
+<%= form_for(@plant) do |f| %>
+  <% if plant.errors.any? %>
+    <div id='error-explanation'>
+      <h2><%= pluralize(plant.errors.count, 'error') %> prevented this plant from being saved:</h2>
+      <ul>
+        <% plant.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :scientific_name %>
+    <%= f.text_field :scientific_name %>
+  </div>
+
+  <p> There should be an array field here for alternate names </p>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :plant_type %>
+    <%= f.text_field :plant_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pot_type %>
+    <%= f.text_field :pot_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pot_size %>
+    <%= f.text_field :pot_size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="field">
+    <%= f.label :soil %>
+    <%= f.text_field :soil %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fertilizer %>
+    <%= f.text_field :fertilizer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :light_requirement %>
+    <%= f.text_field :light_requirement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fertilizer_requirement %>
+    <%= f.text_field :fertilizer_requirement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :humidity_requirement %>
+    <%= f.text_field :humidity_requirement %>
+  </div>
+
+
+  <div class="field">
+    <%= f.label :water_requirement %>
+    <%= f.text_field :water_requirement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :soil_requirement %>
+    <%= f.text_field :soil_requirement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :pruning_requirement %>
+    <%= f.text_field :pruning_requirement %>
+  </div>
+
+  <div class="field">
+    <%= f.label :temperature_range %>
+    <%= f.text_field :temperature_range %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zone %>
+    <%= f.text_field :zone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :origin %>
+    <%= f.text_field :origin %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dormancy_cycle %>
+    <%= f.text_field :dormancy_cycle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bloom_cycle %>
+    <%= f.text_field :bloom_cycle %>
+  </div>
+
+  <div class="field">
+    <%= f.label :propagation_method %>
+    <%= f.text_field :propagation_method %>
+  </div>
+
+  <div class='actions'>
+    <%= f.submit %>
+  </div>
+<% end %>

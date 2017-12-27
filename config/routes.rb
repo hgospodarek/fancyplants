@@ -4,5 +4,5 @@ Rails.application.routes.draw do
 
   root to: "plants#index"
 
-  resources :plants, only: [:index, :new, :create, :show]
+  resources :plants, only: [:index, :new, :create, :show, :edit, :update]
 end
