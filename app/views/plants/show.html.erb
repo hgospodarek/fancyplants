@@ -113,3 +113,27 @@
   <strong>Temperature Range:</strong>
   <%= @plant.temperature_range %>
 </p>
+
+<h2>Log Event</h2>
+<%= button_to('Watered', [@plant, @event], params: { event: { name: 'Watered' } }) %>
+<%= button_to('Pruned', [@plant, @event], params: { event: { name: 'Pruned' } }) %>
+<%= button_to('Fertilized', [@plant, @event], params: { event: { name: 'Fertilized' } }) %>
+<%= button_to('Neem Oil Applied', [@plant, @event], params: { event: { name: 'Neem Oil Applied' } }) %>
+<%= button_to('Pesticide Applied', [@plant, @event], params: { event: { name: 'Pesticide Applied' } }) %>
+<%= button_to('Alcohol Swab Pest Removal', [@plant, @event], params: { event: { name: 'Alcohol Swab Pest Removal' } }) %>
+<%= button_to('Propagation via Leaf', [@plant, @event], params: { event: { name: 'Propagation via Leaf' } }) %>
+<%= button_to('Propagation via Cutting', [@plant, @event], params: { event: { name: 'Propagation via Cutting' } }) %>
+<%= button_to('Offshoot Removed', [@plant, @event], params: { event: { name: 'Offshoot Removed' } }) %>
+<%= button_to('Blooming', [@plant, @event], params: { event: { name: 'Blooming' } }) %>
+<%= button_to('Died', [@plant, @event], params: { event: { name: 'Died' } }) %>
+<%= button_to('Yellow Leaves', [@plant, @event], params: { event: { name: 'Yellow Leaves' } }) %>
+<%= button_to('Crispy Leaves', [@plant, @event], params: { event: { name: 'Crispy Leaves' } }) %>
+<%= button_to('Puckered Leaves', [@plant, @event], params: { event: { name: 'Puckered Leaves' } }) %>
+<%= button_to('Roots Checked', [@plant, @event], params: { event: { name: 'Roots Checked' } }) %>
+<%= button_to('Misted', [@plant, @event], params: { event: { name: 'Misted' } }) %>
+<%= button_to('Soaked', [@plant, @event], params: { event: { name: 'Soaked' } }) %>
+<%= button_to('Potted Up', [@plant, @event], params: { event: { name: 'Potted Up' } }) %>
+<%= button_to('Repotted', [@plant, @event], params: { event: { name: 'Repotted' } }) %>
+<%= button_to('Moved', [@plant, @event], params: { event: { name: 'Moved' } }) %>
+
+<%= render 'events/index', events: @events %>

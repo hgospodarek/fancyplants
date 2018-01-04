@@ -22,6 +22,9 @@ class PlantsController < ApplicationController
 
   def show
     @plant = current_user.plants.find(params[:id])
+
+    @event = @plant.events.build
+    @events = @plant.events.order(created_at: :desc)
   end
 
   def edit

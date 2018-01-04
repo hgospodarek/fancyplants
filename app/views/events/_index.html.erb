@@ -1,0 +1,25 @@
+<h2>Events</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+
+  <% if @events.present? %>
+    <tbody class='events-table'>
+      <% @events.each do |event| %>
+        <tr>
+          <td><%= event.name %></td>
+          <td><%= event.description %></td>
+          <td><%= event.datetime %></td>
+          <td><%= link_to 'Edit', edit_plant_events_path(@plant, event) %></td>
+          <td><%= link_to 'Destroy', [@plant, event], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  <% end %>
+</table>
