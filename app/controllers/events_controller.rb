@@ -19,7 +19,7 @@ class EventsController < ApplicationController
   def update
     @event = @plant.events.find(params[:id])
 
-    if @event.save
+    if @event.update(event_params)
       redirect_to plant_path(@plant), notice: 'Event successfully updated'
     else
       render action: 'edit'

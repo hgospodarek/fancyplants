@@ -24,7 +24,7 @@ class PlantsController < ApplicationController
     @plant = current_user.plants.find(params[:id])
 
     @event = @plant.events.build
-    @events = @plant.events.order(created_at: :desc)
+    @events = @plant.events.order(datetime: :desc)
   end
 
   def edit
