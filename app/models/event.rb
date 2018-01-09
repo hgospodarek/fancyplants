@@ -19,4 +19,12 @@ class Event < ApplicationRecord
                               'Roots Checked',
                               'Misted', 'Soaked'] }
 
+  scope :watered, -> { where(name: 'Watered' )}
+  scope :misted, -> { where(name: 'Misted' )}
+  scope :soaked, -> { where(name: 'Soaked' )}
+  scope :watering, -> { watered.or(misted).or(soaked)}
+
+  scope :pruned, -> { where(name: 'Pruned' )}
+  scope :fertilized, -> { where(name: 'Fertilized' )}
+
 end

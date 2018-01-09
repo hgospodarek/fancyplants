@@ -114,6 +114,23 @@
   <%= @plant.temperature_range %>
 </p>
 
+<h2>When was the last time...</h2>
+
+<p>
+  <strong>Watered:</strong>
+  <%= @plant.last_watered %>
+</p>
+
+<p>
+  <strong>Pruned:</strong>
+  <%= @plant.last_pruned %>
+</p>
+
+<p>
+  <strong>Fertilized:</strong>
+  <%= @plant.last_fertilized %>
+</p>
+
 <h2>Log Event</h2>
 <%= button_to('Watered', [@plant, @event], params: { event: { name: 'Watered' } }) %>
 <%= button_to('Pruned', [@plant, @event], params: { event: { name: 'Pruned' } }) %>
