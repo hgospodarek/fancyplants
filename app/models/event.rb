@@ -5,7 +5,8 @@ class Event < ApplicationRecord
   validates :datetime, presence: true
 
   validates :name, presence: true,
-            inclusion: { in: ['Added to Collection',
+            inclusion: { in: ['Checked',
+                              'Added to Collection',
                               'Potted Up', 'Repotted',
                               'Watered', 'Pruned',
                               'Moved', 'Fertilized',

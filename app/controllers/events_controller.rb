@@ -3,7 +3,7 @@ class EventsController < ApplicationController
 
   def create
     @event = @plant.events.build(event_params)
-    @event.datetime = DateTime.current
+    @event.datetime ||= DateTime.current
 
     if @event.save
       redirect_to plant_path(@plant), notice: 'Event successfully created'

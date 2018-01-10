@@ -131,6 +131,9 @@
   <%= @plant.last_fertilized %>
 </p>
 
+<h2>Check on this Plant</h2>
+<%= render 'events/form', plant: @plant, event: @event, name: 'Checked' %>
+
 <h2>Log Event</h2>
 <%= button_to('Watered', [@plant, @event], params: { event: { name: 'Watered' } }) %>
 <%= button_to('Pruned', [@plant, @event], params: { event: { name: 'Pruned' } }) %>

@@ -23,7 +23,7 @@ class PlantsController < ApplicationController
   def show
     @plant = current_user.plants.find(params[:id])
 
-    @event = @plant.events.build
+    @event = @plant.events.build(name: 'Checked', datetime: DateTime.current)
     @events = @plant.events.order(datetime: :desc)
   end
 
