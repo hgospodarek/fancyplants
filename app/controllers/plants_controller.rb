@@ -44,6 +44,6 @@ class PlantsController < ApplicationController
   private
 
   def plant_params
-    params.require(:plant).permit(:name, :scientific_name, :alternate_names, :description, :plant_type, :pot_type, :pot_size, :location, :soil, :fertilizer, :light_requirement, :fertilizer_requirement, :humidity_requirement, :water_requirement, :soil_requirement, :pruning_requirement, :temperature_range, :zone, :origin, :dormancy_cycle, :bloom_cycle, :propagation_method)
+    params.require(:plant).permit(:name, :scientific_name, :alternate_names, :description, :plant_type, :pot_type, :pot_size, :location, :soil, :fertilizer, :light_requirement, :fertilizer_requirement, :humidity_requirement, :water_requirement, :soil_requirement, :pruning_requirement, :repotting_requirement, :temperature_range, :zone, :origin, :dormancy_cycle, :bloom_cycle, :propagation_method)
   end
 end
